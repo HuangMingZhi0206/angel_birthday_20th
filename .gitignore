@@ -1,0 +1,13 @@
+# Backup files
+*_ORIGINAL.mp4
+update_feedback.py
+update_html.py
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/

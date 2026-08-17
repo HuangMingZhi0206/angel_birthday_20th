@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Happy 20th Birthday Angel! 🎂💕</title>
+  <meta name="description" content="Happy 20th Birthday Angel Augustine Prasetya & Happy 1st Anniversary! From Kevin, with love 💕">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- Music Toggle -->
+  <button class="music-toggle" id="musicToggle" aria-label="Toggle music">🔇</button>
+  <audio id="bgMusic" loop preload="auto" autoplay>
+    <source src="backsound dia nyanyi.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Floating Hearts Background -->
+  <div class="floating-hearts" id="floatingHearts"></div>
+
+  <!-- Canvas Overlays -->
+  <canvas id="confetti-canvas"></canvas>
+  <canvas id="hearts-canvas"></canvas>
+  <canvas id="fireworks-canvas"></canvas>
+
+  <!-- Photo Viewer Overlay -->
+  <div class="photo-viewer" id="photoViewer">
+    <button class="close-btn" id="closeViewer">✕</button>
+    <img src="" alt="" id="viewerImg">
+    <div class="viewer-caption" id="viewerCaption"></div>
+  </div>
+
+  <!-- Video Viewer Overlay -->
+  <div class="video-viewer-modal" id="videoViewerModal">
+    <button class="close-btn" id="closeVideoViewer">✕</button>
+    <video id="modalVideo" controls playsinline></video>
+    <div class="viewer-caption" id="videoViewerCaption"></div>
+  </div>
+
+  <!-- ═══════════════════════════
+       SECTION 1: LANDING
+       ═══════════════════════════ -->
+  <section class="landing" id="sec-landing">
+    <div class="envelope-container" id="envelopeContainer">
+      <div class="envelope" id="envelope">
+        <span class="envelope-heart">💌</span>
+        <div class="envelope-flap"></div>
+        <div class="envelope-body"></div>
+        <div class="envelope-letter">Tap untuk buka! 🎁</div>
+      </div>
+    </div>
+
+    <div class="landing-text" id="landingText">
+      <h1>
+        <span class="emoji-big">🎂</span>
+        Happy 20th Birthday,<br>Angel! 🎀
+      </h1>
+      <div class="anniversary-text">& Happy 1st Anniversary! 💕</div>
+      <div class="from-text">From Kevin, with love 💕</div>
+      <button class="open-gift-btn" id="openGiftBtn">Buka Hadiah 🎁</button>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════
+       SECTION 2: LOVE LETTER
+       ═══════════════════════════ -->
+  <section class="love-letter section-locked" id="sec-letter">
+    <h2 class="section-title reveal">💌 Surat dari Kevin</h2>
+    <p class="section-subtitle reveal">baca pelan-pelan ya...</p>
+
+    <div class="letter-paper reveal">
+      <div class="tape"></div>
+      <div class="letter-content" id="letterContent">
+        <p class="greeting">Hai Angel sayang~ 🥰</p>
+        <p>Selamat ulang tahun yang ke-20! 🎂 Akhirnya kamu nggak bisa ngaku "masih remaja" lagi ya wkwkwk.</p>
+        <p>Tau nggak, dari pertama kali aku suka kamu, kamu tuh orangnya gemesin banget. Aku kasih clue banyak banget, kamu masih aja "ga mungkin akuu kann?" 😂 Sampai akhirnya pilihan terakhir baru kamu sadar. Pilihan terakhir tapi jadi pilihan pertama di hatiku~ ciee.</p>
+        <p>Terus pas aku tembak kamu di gereja, kamu malah jawab "okee tidur dlu, jawabny besok" 💀 Aku deg-degan semalaman tau!! Untung besoknya kamu bilang "iyaa mauu" — kalau engga, mungkin aku udah jadi batu wkwk.</p>
+        <p>Walaupun perjalanan kita nggak selalu mulus (sempet putus, sempet bingung, sempet "excel excel bae" 😤), tapi kita selalu balik ke satu sama lain. Dan itu yang bikin hubungan kita spesial. 💕</p>
+        <p>Aku seneng banget kita bisa balikan lagi. Tiap momen bareng kamu tuh selalu seru—mulai dari dimasakin yang enak-enak 🍳, nemenin kamu 'lari kecil' yang ujung-ujungnya cuma jalan santai 🏃‍♀️, ditarik-tarik nggak jelas mau kemana, sampai ngelihat tingkah lucu kamu pas jalan bareng mami demi keliatan lebih tinggi 😆</p>
+        <p>Di umur 20 ini, aku doain kamu makin cantik, makin pinter, dan pastinya makin sayang sama aku dong ya 🥺 Semangat terus ya buat intern-nya! Aku selalu doain yang terbaik, yakin kamu pasti bisa, dan selalu bangga sama kamu! 💪✨</p>
+        <p>Happy 1st Anniversary juga! 31 Agustus 2025 — hari dimana kamu akhirnya bilang "iyaa mauu" dan hidup aku jadi lebih berwarna. 🌈</p>
+        <p class="signature">I love you, Angel Augustine Prasetya 💕<br>— Kevin Syonin 🤍</p>
+      </div>
+    </div>
+  
+    <button class="next-section-btn" data-unlock="sec-timeline">Lanjut <span class="btn-arrow">▼</span></button>
+  </section>
+
+  <!-- ═══════════════════════════
+       SECTION 3: TIMELINE
+       ═══════════════════════════ -->
+  <section class="timeline-section section-locked" id="sec-timeline">
+    <h2 class="section-title reveal">📖 Cerita Kita</h2>
+    <p class="section-subtitle reveal">perjalanan cinta Kevin & Angel ✨</p>
+
+    <div class="timeline">
+
+      <!-- Chapter 1: Kevin Suka Angel -->
+      <div class="timeline-chapter reveal" data-chapter="1">
+        <div class="timeline-dot">💕</div>
+        <div class="chapter-header">
+          <h3>Chapter 1: Kevin Suka Angel 👀</h3>
+          <div class="chapter-date">7 Agustus 2025</div>
+        </div>
+        <div class="chapter-narration">Pertama kali kevin suka Angel — ngasih clue banyak banget tapi dia susah nebaknya sampe 2 hari 😂</div>
+        <div class="chat-container">
+          <div class="chat-bubble angel"><div class="chat-name">Angel 🧸</div>Alicia?<div class="chat-time">17:47</div></div>
+          <div class="chat-bubble kevin"><div class="chat-name">Kevin 🐻</div>Ndk pasaran ndk sih.<div class="chat-time">17:47</div></div>
+          <div class="chat-bubble angel"><div class="chat-name">Angel 🧸</div>paling pasaran nama Angel co 😐<div class="chat-time">17:48</div></div>
+          <div class="chat-bubble kevin"><div class="chat-name">Kevin 🐻</div>Aowkwoowow<div class="chat-time">17:48</div></div>
+          <div class="chat-bubble angel"><div class="chat-name">Angel 🧸</div>selain Angel apa lg... sek<div class="chat-time">17:48</div></div>
+          <div class="chat-bubble kevin"><div class="chat-name">Kevin 🐻</div>Alamak<div class="chat-time">17:48</div></div>
+        </div>
+      </div>
+
+      <!-- Chapter 2: Ga Mungkin Aku Kann? -->
+      <div class="timeline-chapter reveal" data-chapter="2">
+        <div class="timeline-dot">😳</div>
+        <div class="chapter-header">
+          <h3>Chapter 2: "Ga Mungkin Aku Kann?" 😳</h3>
+          <div class="chapter-date">7 Agustus 2025</div>
+        </div>
+        <div class="chapter-narration">Angel udah mulai curiga tapi masih anggap engga... sampai akhirnya pilihan terakhir 😏</div>
+        <div class="chat-container">
+          <div class="chat-bubble angel"><div class="chat-name">Angel 🧸</div>brooo… ga mungkin akuu kann?<div class="chat-time">19:07</div></div>
+          <div class="chat-bubble angel"><div class="chat-name">Angel 🧸</div>cih... susah co, terlalu byk angel<div class="chat-time">19:08</div></div>
+          <div class="chat-bubble kevin"><div class="chat-name">Kevin 🐻</div>Ndk tau<div class="chat-time">19:08</div></div>
+          <div class="chat-bubble angel"><div class="chat-name">Angel 🧸</div>ok kita anggap gaa<div class="chat-time">19:08</div></div>
+          <div class="chat-bubble kevin"><div class="chat-name">Kevin 🐻</div>Cih<div class="chat-time">19:08</div></div>
+          <div class="chat-bubble angel"><div class="chat-name">Angel 🧸</div>ak tau... tp ak takut salah HAHAHAHA<div class="chat-time">19:21</div></div>
+          <div class="chat-bubble kevin"><div class="chat-name">Kevin 🐻</div>Siapa neh<div class="chat-time">19:22</div></div>
+          <div class="chat-bubble angel"><div class="chat-name">Angel 🧸</div>akuu HAHAHAHAH<div class="chat-time">19:23</div></div>
+          <div class="chat-bubble kevin"><div class="chat-name">Kevin 🐻</div>Asoksowkwowk Pilihan terakhir ye<div class="chat-time">19:23</div></div>
+          <div class="chat-bubble angel"><div class="chat-name">Angel 🧸</div>ha a wkwk<div class="chat-time">19:23</div></div>
+        </div>
+        <!-- Voice Note -->
+        <div class="timeline-voice-note">
+          <button class="vn-play-btn" data-audio="dia masih ragu dan memilih nama yang di ig.ogg">▶</button>
+          <div class="vn-waveform" id="vn-timeline-1"></div>
+          <div><div class="vn-label">🎤 VN: "dia masih ragu..."</div></div>
+        </div>
+      </div>
+
+      <!-- Chapter 3: Ragu Tapi Udah Tau -->
+      <div class="timeline-chapter reveal" data-chapter="3">
+        <div class="timeline-dot">😏</div>
+        <div class="chapter-header">
+          <h3>Chapter 3: Ragu Tapi Udah Tau 😏</h3>
+          <div class="chapter-date">7 Agustus 2025</div>
+        </div>
+        <div class="chapter-narration">Angel coba samain dengan clue tapi masih ragu-ragu... "why ak?" 🥺</div>
+        <div class="chat-container">
+          <div class="chat-bubble angel"><div class="chat-name">Angel 🧸</div>nama angel, prnh badmin, gereja brg kau prnh, ultah juni kebawah...<div class="chat-time">19:24</div></div>
+          <div class="chat-bubble kevin"><div class="chat-name">Kevin 🐻</div>And then?<div class="chat-time">19:25</div></div>
+          <div class="chat-bubble angel"><div class="chat-name">Angel 🧸</div>ikut retreat, bantu sospro kau... alamak jd beneran aku ta?<div class="chat-time">19:27</div></div>
+          <div class="chat-bubble kevin"><div class="chat-name">Kevin 🐻</div>Ndk tau<div class="chat-time">19:27</div></div>
+          <div class="chat-bubble angel"><div class="chat-name">Angel 🧸</div>ok bukan brrti<div class="chat-time">19:27</div></div>
+          <div class="chat-bubble angel"><div class="chat-name">Angel 🧸</div>tp klo ak why ak? 😀<div class="chat-time">19:34</div></div>
+          <div class="chat-bubble kevin"><div class="chat-name">Kevin 🐻</div>Malah nanya lagi<div class="chat-time">19:35</div></div>
+          <div class="chat-bubble angel"><div class="chat-name">Angel 🧸</div>kek e ak jg bkn yg pinter, ga yg baik sekali jg, ga yg beriman sekali jg... wkwkwk trllu byk minus e jd kek ga mungkin ja<div class="chat-time">19:36</div></div>
+        </div>
+      </div>
+
+      <!-- Chapter 4: Kevin Tembak di Gereja! -->
+      <div class="timeline-chapter reveal" data-chapter="4">
+        <div class="timeline-dot">💒</div>
+        <div class="chapter-header" style="background: linear-gradient(135deg, #E91E63, #FF5252);">
+          <h3>Chapter 4: Kevin Tembak di Gereja! 💒💕</h3>
+          <div class="chapter-date">30-31 Agustus 2025</div>
+        </div>
+        <div class="chapter-narration">Momen paling deg-degan! Kevin nembak Angel di gereja, dan Angel jawabnya... besok 😂</div>
+        <div class="chat-container">
+          <div class="chat-bubble kevin" style="background: #FFE0EC; border: 2px solid #FF69B4;"><div class="chat-name">Kevin 🐻</div>mau kah jadi pacar ku? 💕<div class="chat-time">23:47</div></div>
+          <div class="chat-bubble angel"><div class="chat-name">Angel 🧸</div>okee tidur dlu<div class="chat-time">23:47</div></div>
+          <div class="chat-bubble angel"><div class="chat-name">Angel 🧸</div>jawabny besok<div class="chat-time">23:47</div></div>
+          <div class="chat-bubble angel"><div class="chat-name">Angel 🧸</div>iniii yakinn tahh? km dh yakinnn<div class="chat-time">00:16</div></div>
+          <div class="chat-bubble angel"><div class="chat-name">Angel 🧸</div>wkwkkw jd mau ku kasi jawaban skrng kah? atau bsk ja?<div class="chat-time">00:52</div></div>
+          <div class="chat-bubble kevin"><div class="chat-name">Kevin 🐻</div>telat, harusnya tanggal sabtu hariii<div class="chat-time">00:52</div></div>
+          <div class="chat-bubble angel"><div class="chat-name">Angel 🧸</div>wkwkwk sama ja... kan kau blg nya kmrn, ak jawab hr ini<div class="chat-time">00:53</div></div>
+          <div class="chat-bubble kevin"><div class="chat-name">Kevin 🐻</div>jadi apa?<div class="chat-time">00:56</div></div>
+          <div class="chat-bubble angel" style="background: #FFE0EC; border: 2px solid #FF69B4; font-size: 16px; font-weight: 700;"><div class="chat-name">Angel 🧸</div>iyaa mauu 💕<div class="chat-time">00:57</div></div>
+        </div>
+      </div>
+
+      <!-- Chapter 5: Sempet Putus -->
+      <div class="timeline-chapter reveal" data-chapter="5">
+        <div class="timeline-dot">💔</div>
+        <div class="chapter-header" style="background: linear-gradient(135deg, #78909C, #90A4AE);">
+          <h3>Chapter 5: Sempet Putus... 💔</h3>
+          <div class="chapter-date">18 September 2025</div>
+        </div>
+        <div class="chapter-narration">Angel belum bisa melanjutkan karena belum move on... tapi mereka tetap jadi teman baik 🤝</div>
+        <div class="chat-container">
+          <div class="chat-bubble angel"><div class="chat-name">Angel 🧸</div>same here, ak jg gt ke excel<div class="chat-time">18:02</div></div>
+          <div class="chat-bubble angel"><div class="chat-name">Angel 🧸</div>so i can't… sorryy<div class="chat-time">18:02</div></div>
+        </div>
+        <div class="chapter-narration" style="margin-top:8px">Tapi beberapa hari kemudian udah ngobrol biasa lagi~</div>
+        <div class="chat-container">
+          <div class="chat-bubble angel"><div class="chat-name">Angel 🧸</div>oiya yg hr ni jan lup bayar ya hehehe<div class="chat-time">00:18</div></div>
+          <div class="chat-bubble angel"><div class="chat-name">Angel 🧸</div>bwain dia kesini dong, dede ak<div class="chat-time">10:53</div></div>
+          <div class="chat-bubble kevin"><div class="chat-name">Kevin 🐻</div>excel?<div class="chat-time">10:53</div></div>
+          <div class="chat-bubble angel"><div class="chat-name">Angel 🧸</div>excel excel bae, kaga move on move on gw mah klo gtu<div class="chat-time">10:53</div></div>
+        </div>
+        <!-- Voice Note -->
+        <div class="timeline-voice-note">
+          <button class="vn-play-btn" data-audio="pertama kali chat lagi setelah putus soal badmin.ogg">▶</button>
+          <div class="vn-waveform" id="vn-timeline-2"></div>
+          <div><div class="vn-label">🎤 VN: "pertama kali chat lagi..."</div></div>
+        </div>
+      </div>
+
+      <!-- Chapter 6: Dekat Lagi -->
+      <div class="timeline-chapter reveal" data-chapter="6">
+        <div class="timeline-dot">🤔</div>
+        <div class="chapter-header" style="background: linear-gradient(135deg, #AB47BC, #CE93D8);">
+          <h3>Chapter 6: Dekat Lagi, Masih Bingung 🤔</h3>
+          <div class="chapter-date">1 Oktober 2025</div>
+        </div>
+        <div class="chapter-narration">Mereka dekat lagi, tapi masih bingung mau kemana... bingung tapi nyaman 💭</div>
+        <div class="chat-container">
+          <div class="chat-bubble angel"><div class="chat-name">Angel 🧸</div>gmn ya, ak mo cobaa lebi deket lg sm kauu cm disatu sisi pun ad hal yg bikin bingung jg wkwkwk<div class="chat-time">00:16</div></div>
+          <div class="chat-bubble angel"><div class="chat-name">Angel 🧸</div>maaf ndk ad kepastian<div class="chat-time">00:16</div></div>
+          <div class="chat-bubble kevin"><div class="chat-name">Kevin 🐻</div>ku juga bingung..<div class="chat-time">00:16</div></div>
+          <div class="chat-bubble angel"><div class="chat-name">Angel 🧸</div>maaf bikin kau jg bingung sm sikap ak<div class="chat-time">00:16</div></div>
+          <div class="chat-bubble kevin"><div class="chat-name">Kevin 🐻</div>ku bingung sama sendiri ku, ku bingung sama keadaan<div class="chat-time">00:17</div></div>
+        </div>
+      </div>
+
+      <!-- Chapter 7: Akhirnya Pacaran Lagi! -->
+      <div class="timeline-chapter reveal" data-chapter="7">
+        <div class="timeline-dot">🎉</div>
+        <div class="chapter-header" style="background: linear-gradient(135deg, #E91E63, #FF4081, #FF80AB);">
+          <h3>Chapter 7: Akhirnya Pacaran Lagi! 🎉🎉</h3>
+          <div class="chapter-date">6 Oktober 2025</div>
+        </div>
+        <div class="chapter-narration">Angel akhirnya memberikan jawabannya... dan kali ini untuk selamanya! 💕</div>
+        <div class="chat-container">
+          <div class="chat-bubble angel" style="font-size: 12px;"><div class="chat-name">Angel 🧸</div>akuuu tuh tau dan sangattt sadar km tulus pol jd kek i want to try once again... jujurrr ak jg dh nyaman pol sm km😛 makanya ak mauuuu tapii kali inii gamau buruuu buruuu jg<div class="chat-time">21:22</div></div>
+          <div class="chat-bubble kevin"><div class="chat-name">Kevin 🐻</div>jujur masih ndk paham<div class="chat-time">21:28</div></div>
+          <div class="chat-bubble angel" style="font-weight:700;"><div class="chat-name">Angel 🧸</div>yaudah ayo pacaran lg<div class="chat-time">21:32</div></div>
+          <div class="chat-bubble kevin"><div class="chat-name">Kevin 🐻</div>hah?<div class="chat-time">21:33</div></div>
+          <div class="chat-bubble angel"><div class="chat-name">Angel 🧸</div>conclusion ny ap<div class="chat-time">23:27</div></div>
+          <div class="chat-bubble kevin"><div class="chat-name">Kevin 🐻</div>kmu<div class="chat-time">23:27</div></div>
+          <div class="chat-bubble angel"><div class="chat-name">Angel 🧸</div>ha kok ak<div class="chat-time">23:27</div></div>
+          <div class="chat-bubble kevin"><div class="chat-name">Kevin 🐻</div>wkwkkwkw mau kah balik pacaran lagi?<div class="chat-time">23:28</div></div>
+          <div class="chat-bubble angel"><div class="chat-name">Angel 🧸</div>mau ga ya mau ga ya<div class="chat-time">23:29</div></div>
+          <div class="chat-bubble kevin"><div class="chat-name">Kevin 🐻</div>cih<div class="chat-time">23:30</div></div>
+          <div class="chat-bubble angel"><div class="chat-name">Angel 🧸</div>HAHHAA<div class="chat-time">23:31</div></div>
+        </div>
+        <!-- Voice Note bonus -->
+        <div class="timeline-voice-note">
+          <button class="vn-play-btn" data-audio="lucu lucuan aja ini haha.mpeg">▶</button>
+          <div class="vn-waveform" id="vn-timeline-3"></div>
+          <div><div class="vn-label">🎤 Bonus VN: "lucu lucuan aja haha"</div></div>
+        </div>
+      </div>
+
+    </div>
+  
+    <button class="next-section-btn" data-unlock="sec-gallery">Lanjut <span class="btn-arrow">▼</span></button>
+  </section>
+
+  <!-- ═══════════════════════════
+       SECTION 4: PHOTO GALLERY
+       ═══════════════════════════ -->
+  <section class="gallery-section section-locked" id="sec-gallery">
+    <h2 class="section-title reveal">📸 Momen Kita</h2>
+    <p class="section-subtitle reveal">tap foto untuk zoom! 🔍</p>
+
+    <!-- Gereja Bareng -->
+    <div class="gallery-category reveal">
+      <div class="category-title">💒 Gereja Bareng</div>
+      <div class="photo-scroll">
+        <div class="polaroid" style="--rotate: -2deg; --tape-rotate: 3deg" data-caption="Gereja bareng awal-awal, gemesin 💒">
+          <div class="tape-top"></div>
+          <img src="Photo/ini pas gereja bareng awal awal, gemesin.jpg" alt="Gereja bareng awal" loading="lazy">
+          <div class="caption">Gereja bareng awal-awal 💒</div>
+        </div>
+        <div class="polaroid" style="--rotate: 1deg; --tape-rotate: -2deg" data-caption="Gereja bareng lagi! 🙏">
+          <div class="tape-top"></div>
+          <img src="Photo/ini gereja bareng lagi.jpg" alt="Gereja bareng lagi" loading="lazy">
+          <div class="caption">Gereja bareng lagi 🙏</div>
+        </div>
+        <div class="polaroid" style="--rotate: -1deg; --tape-rotate: 5deg" data-caption="Gereja bareng yang baru ✨">
+          <div class="tape-top"></div>
+          <img src="Photo/ini gereja bareng lagi yang baru.jpg" alt="Gereja bareng baru" loading="lazy">
+          <div class="caption">Yang terbaru ✨</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Photobooth -->
+    <div class="gallery-category reveal">
+      <div class="category-title">📸 Photobooth</div>
+      <div class="photo-scroll">
+        <div class="polaroid" style="--rotate: 2deg; --tape-rotate: -1deg" data-caption="Photobooth pertama & ngedate 📸">
+          <div class="tape-top"></div>
+          <img src="Photo/awal photobooth dan ngedate.jpg" alt="Photobooth pertama" loading="lazy">
+          <div class="caption">Awal photobooth & ngedate 📸</div>
+        </div>
+        <div class="polaroid" style="--rotate: -3deg; --tape-rotate: 2deg" data-caption="Photobooth lagiii 📸">
+          <div class="tape-top"></div>
+          <img src="Photo/ini photobooth lagi.jpg" alt="Photobooth lagi" loading="lazy">
+          <div class="caption">Photobooth lagiii 📸</div>
+        </div>
+        <div class="polaroid" style="--rotate: 1deg; --tape-rotate: -3deg" data-caption="Photobooth pas pacaran lagi di Desember 💕">
+          <div class="tape-top"></div>
+          <img src="Photo/photobooth mulai pacaran lagi di desember.jpg" alt="Photobooth Desember" loading="lazy">
+          <div class="caption">Pacaran lagi di Desember 💕</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Masak & Makan -->
+    <div class="gallery-category reveal">
+      <div class="category-title">🍜 Masak & Makan</div>
+      <div class="photo-scroll">
+        <div class="polaroid" style="--rotate: -2deg; --tape-rotate: 4deg" data-caption="Angel lagi masak! 👩‍🍳">
+          <div class="tape-top"></div>
+          <img src="Photo/ini photo dia lagi masak, hehhe.jpg" alt="Masak" loading="lazy">
+          <div class="caption">Angel lagi masak 👩‍🍳</div>
+        </div>
+        <div class="polaroid" style="--rotate: 2deg; --tape-rotate: -2deg" data-caption="Masakan Angel, enak! 😋">
+          <div class="tape-top"></div>
+          <img src="Photo/masakan angel enak ini.jpg" alt="Masakan Angel" loading="lazy">
+          <div class="caption">Masakan Angel, enak! 😋</div>
+        </div>
+        <div class="polaroid" style="--rotate: -1deg; --tape-rotate: 3deg" data-caption="Beli ayam cabe ijo, enak banget! 🌶️">
+          <div class="tape-top"></div>
+          <img src="Photo/ini lagi beli ayam cabe ijo, enak banget.jpg" alt="Ayam cabe ijo" loading="lazy">
+          <div class="caption">Ayam cabe ijo 🌶️ enak!</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jalan-Jalan -->
+    <div class="gallery-category reveal">
+      <div class="category-title">🚶 Jalan-Jalan</div>
+      <div class="photo-scroll">
+        <div class="polaroid" style="--rotate: 1deg; --tape-rotate: -2deg" data-caption="Foto bareng di mall 🛒">
+          <div class="tape-top"></div>
+          <img src="Photo/foto bareng lagi di mall.jpg" alt="Mall" loading="lazy">
+          <div class="caption">Di mall bareng 🛒</div>
+        </div>
+        <div class="polaroid" style="--rotate: -2deg; --tape-rotate: 3deg" data-caption="Di Tian Lala habis kampus 🍜">
+          <div class="tape-top"></div>
+          <img src="Photo/ini lagi di tian lala bareng habis kampus.jpg" alt="Tian Lala" loading="lazy">
+          <div class="caption">Di Tian Lala habis kampus 🍜</div>
+        </div>
+        <div class="polaroid" style="--rotate: 2deg; --tape-rotate: -4deg" data-caption="Lagi di KRL, lucu! 🚂">
+          <div class="tape-top"></div>
+          <img src="Photo/ini lagi mau jalan jalan. lagi di krl, lucu.jpg" alt="KRL" loading="lazy">
+          <div class="caption">Di KRL, lucu! 🚂</div>
+        </div>
+        <div class="polaroid" style="--rotate: -1deg; --tape-rotate: 2deg" data-caption="Pakai cheongsam ke AEON! 👗">
+          <div class="tape-top"></div>
+          <img src="Photo/ini photo bareng pakai cheongsam ke aeon.jpg" alt="Cheongsam AEON" loading="lazy">
+          <div class="caption">Cheongsam ke AEON 👗</div>
+        </div>
+        <div class="polaroid" style="--rotate: 3deg; --tape-rotate: -1deg" data-caption="Naruh buku pakai tangga haha 📚">
+          <div class="tape-top"></div>
+          <img src="Photo/ini photo dia lagi naruh buku diatas pakai tangga haha.jpg" alt="Naruh buku" loading="lazy">
+          <div class="caption">Naruh buku pakai tangga 📚</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jogja & Thailand -->
+    <div class="gallery-category reveal">
+      <div class="category-title">✈️ Jogja & Thailand</div>
+      <div class="photo-scroll">
+        <div class="polaroid" style="--rotate: -2deg; --tape-rotate: 3deg" data-caption="Di Jogja, lucu mukanya! 🏛️">
+          <div class="tape-top"></div>
+          <img src="Photo/hehe ini dijogja juga, lucu mukanya.jpg" alt="Jogja" loading="lazy">
+          <div class="caption">Di Jogja, lucu! 🏛️</div>
+        </div>
+        <div class="polaroid" style="--rotate: 2deg; --tape-rotate: -2deg" data-caption="Waktu di Desember ke Jogja 🌄">
+          <div class="tape-top"></div>
+          <img src="Photo/ini waktu didesember ke jogja.JPG" alt="Jogja Desember" loading="lazy">
+          <div class="caption">Desember ke Jogja 🌄</div>
+        </div>
+        <div class="polaroid" style="--rotate: -1deg; --tape-rotate: 4deg" data-caption="Angel di Thailand! 🇹🇭">
+          <div class="tape-top"></div>
+          <img src="Photo/ini poto dia di thailand.jpg" alt="Thailand" loading="lazy">
+          <div class="caption">Angel di Thailand 🇹🇭</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Angel Gemesin -->
+    <div class="gallery-category reveal">
+      <div class="category-title">😍 Angel Gemesin</div>
+      <div class="photo-scroll">
+        <div class="polaroid" style="--rotate: 2deg; --tape-rotate: -3deg" data-caption="Ketemu lagi setelah liburan semester ☺️">
+          <div class="tape-top"></div>
+          <img src="Photo/awal ketemu lagi setelah liburan semester, dan setelah ultah dia juga.jpg" alt="Ketemu lagi" loading="lazy">
+          <div class="caption">Ketemu lagi setelah liburan ☺️</div>
+        </div>
+        <div class="polaroid" style="--rotate: -3deg; --tape-rotate: 2deg" data-caption="Dia sakit ke RS hahaha 🏥">
+          <div class="tape-top"></div>
+          <img src="Photo/dia sakit ke rs hahaha.jpeg" alt="Sakit RS" loading="lazy">
+          <div class="caption">Sakit ke RS hahaha 🏥</div>
+        </div>
+        <div class="polaroid" style="--rotate: 1deg; --tape-rotate: -1deg" data-caption="Main sama temennya pas liburan 🎮">
+          <div class="tape-top"></div>
+          <img src="Photo/ini dia lagi mains sama temennya pas liburan semester.jpg" alt="Main temen" loading="lazy">
+          <div class="caption">Main sm temen liburan 🎮</div>
+        </div>
+        <div class="polaroid" style="--rotate: -2deg; --tape-rotate: 4deg" data-caption="Foto liburan semester, lucu kan! 🌸">
+          <div class="tape-top"></div>
+          <img src="Photo/ini juga foto dia pas liburan semester, lucu kan.jpg" alt="Liburan semester" loading="lazy">
+          <div class="caption">Liburan semester, lucu kan! 🌸</div>
+        </div>
+        <div class="polaroid" style="--rotate: 3deg; --tape-rotate: -2deg" data-caption="Lucu gemesin! 🥰">
+          <div class="tape-top"></div>
+          <img src="Photo/ini juga photo dia, lucu gemesin.jpg" alt="Lucu gemesin" loading="lazy">
+          <div class="caption">Lucu gemesin! 🥰</div>
+        </div>
+      </div>
+    </div>
+  
+    <button class="next-section-btn" data-unlock="sec-video">Lanjut <span class="btn-arrow">▼</span></button>
+  </section>
+
+  <!-- ═══════════════════════════
+       SECTION 5: VIDEO MEMORIES
+       ═══════════════════════════ -->
+  <section class="video-section section-locked" id="sec-video">
+    <h2 class="section-title reveal">🎬 Video Kita</h2>
+    <p class="section-subtitle reveal">tap untuk play! ▶️</p>
+
+    <div class="video-grid">
+      <div class="video-card reveal">
+        <div class="video-wrapper">
+          <video preload="metadata" playsinline>
+            <source src="video/ini video awal pas pacaran lagi dan photobooth ke dua.mp4" type="video/mp4">
+          </video>
+          <div class="video-play-overlay"><div class="play-circle">▶</div></div>
+        </div>
+        <div class="video-caption">📸 Photobooth ke-2 pas pacaran lagi!</div>
+      </div>
+
+      <div class="video-card reveal">
+        <div class="video-wrapper">
+          <video preload="metadata" playsinline>
+            <source src="video/ini video dia lagi narik aku, lupa mau kemana haha.mp4" type="video/mp4">
+          </video>
+          <div class="video-play-overlay"><div class="play-circle">▶</div></div>
+        </div>
+        <div class="video-caption">🏃‍♀️ Dia narik aku, lupa mau kemana 😂</div>
+      </div>
+
+      <div class="video-card reveal">
+        <div class="video-wrapper">
+          <video preload="metadata" playsinline>
+            <source src="video/ini video dia, lucu banget.mp4" type="video/mp4">
+          </video>
+          <div class="video-play-overlay"><div class="play-circle">▶</div></div>
+        </div>
+        <div class="video-caption">🥰 Lucu banget!!</div>
+      </div>
+
+      <div class="video-card reveal">
+        <div class="video-wrapper">
+          <video preload="metadata" playsinline>
+            <source src="video/video jalan sama mami ku, tapi dia mau berasa lebih tinggi haha.mp4" type="video/mp4">
+          </video>
+          <div class="video-play-overlay"><div class="play-circle">▶</div></div>
+        </div>
+        <div class="video-caption">👩‍👧 Jalan sama Mami, mau keliatan lebih tinggi 😆</div>
+      </div>
+
+      <div class="video-card reveal">
+        <div class="video-wrapper">
+          <video preload="metadata" playsinline>
+            <source src="video/video jogging tapi ga jogging, katanya lari kecil.mp4" type="video/mp4">
+          </video>
+          <div class="video-play-overlay"><div class="play-circle">▶</div></div>
+        </div>
+        <div class="video-caption">🏃‍♀️ Jogging tapi ga jogging, katanya lari kecil~</div>
+      </div>
+
+      <div class="video-card reveal">
+        <div class="video-wrapper">
+          <video preload="metadata" playsinline>
+            <source src="video/video lagi jalan beli jajan bareng.mp4" type="video/mp4">
+          </video>
+          <div class="video-play-overlay"><div class="play-circle">▶</div></div>
+        </div>
+        <div class="video-caption">🍡 Jalan beli jajan bareng!</div>
+      </div>
+    </div>
+  
+    <button class="next-section-btn" data-unlock="sec-quiz">Lanjut <span class="btn-arrow">▼</span></button>
+  </section>
+
+  
+
+  <!-- ═══════════════════════════
+       SECTION 7: QUIZ GAME
+       ═══════════════════════════ -->
+  <section class="quiz-section section-locked" id="sec-quiz">
+    <h2 class="section-title reveal">🎮 Quiz: Seberapa Kenal?</h2>
+    <p class="section-subtitle reveal">test seberapa tau kamu tentang Kevin & Angel! 🧠</p>
+
+    <div class="quiz-container" id="quizContainer">
+      <div class="quiz-progress" id="quizProgress"></div>
+      <div class="quiz-card" id="quizCard">
+        <!-- Quiz content injected by JS -->
+      </div>
+    </div>
+  
+    <button class="next-section-btn" data-unlock="sec-scratch" id="quizNextBtn" style="display:none">Lanjut <span class="btn-arrow">▼</span></button>
+  </section>
+
+  <!-- ═══════════════════════════
+       SECTION 8: SCRATCH CARD
+       ═══════════════════════════ -->
+  <section class="scratch-section section-locked" id="sec-scratch">
+    <h2 class="section-title reveal">🎫 Kejutan Spesial!</h2>
+    <p class="section-subtitle reveal">gosok kartunya pakai jari~ ✨</p>
+
+    <div class="scratch-cards">
+      <div class="scratch-card reveal" id="scratch-1">
+        <div class="card-content">
+          <div class="card-emoji">🤗</div>
+          <div class="card-text">Free Hug</div>
+          <div class="card-subtext">Bisa ditukar kapan aja, ga ada expired! 💕</div>
+        </div>
+        <canvas></canvas>
+      </div>
+
+      <div class="scratch-card reveal" id="scratch-2">
+        <div class="card-content">
+          <div class="card-emoji">😘</div>
+          <div class="card-text">Free Kiss</div>
+          <div class="card-subtext">Bisa ditukar kapan aja~ 😘</div>
+        </div>
+        <canvas></canvas>
+      </div>
+
+      <div class="scratch-card reveal" id="scratch-3">
+        <div class="card-content">
+          <div class="card-emoji">🎁</div>
+          <div class="card-text">Gift Kejutan!</div>
+          <div class="card-subtext">Tungguin aja ya~ 🎁</div>
+        </div>
+        <canvas></canvas>
+      </div>
+    </div>
+
+    <div class="scratch-instruction">👆 Gosok pakai jari untuk buka!</div>
+  
+    <button class="next-section-btn" data-unlock="sec-cake">Lanjut <span class="btn-arrow">▼</span></button>
+  </section>
+
+  <!-- ═══════════════════════════
+       SECTION 9: BIRTHDAY CAKE
+       ═══════════════════════════ -->
+  <section class="cake-section section-locked" id="sec-cake">
+    <h2 class="section-title reveal">🎂 Make a Wish!</h2>
+    <p class="section-subtitle reveal">tap kue untuk tiup lilinnya~ 🕯️</p>
+
+    <div class="cake-container reveal" id="cakeContainer">
+      <div class="candles-container" id="candlesContainer">
+        <!-- 20 candles injected by JS -->
+      </div>
+      <div class="cake">
+        <div class="cake-layer cake-layer-3">
+          <div class="cake-frosting"></div>
+        </div>
+        <div class="cake-layer cake-layer-2">
+          <div class="cake-frosting"></div>
+        </div>
+        <div class="cake-layer cake-layer-1">
+          <div class="cake-frosting"></div>
+        </div>
+      </div>
+      <div class="cake-plate"></div>
+    </div>
+    <div class="tap-instruction" id="tapInstruction">👆 Tap kuenya untuk tiup 20 lilin!</div>
+
+    <!-- Anniversary Celebration -->
+    <div class="anniversary-box reveal">
+      <h3>Happy 1st Anniversary! 💕</h3>
+      <div class="anni-date">31 Agustus 2025 — Selamanya 💍</div>
+      <div class="anniversary-counter">
+        <div class="counter-item">
+          <div class="counter-number">1</div>
+          <div class="counter-label">Tahun</div>
+        </div>
+        <div class="counter-item">
+          <div class="counter-number">∞</div>
+          <div class="counter-label">Kenangan</div>
+        </div>
+        <div class="counter-item">
+          <div class="counter-number">1</div>
+          <div class="counter-label">Hati</div>
+        </div>
+        <div class="counter-item">
+          <div class="counter-number">❤️</div>
+          <div class="counter-label">Cinta</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Closing Message -->
+    <div class="closing-message reveal">
+      <p>Makasih udah jadi bagian terindah di hidup aku, Angel. 💕</p>
+      <p>Semoga tahun-tahun berikutnya kita tetap bareng, tetap ketawa bareng, tetap bingung bareng, dan tetap sayang satu sama lain. 🤍</p>
+      <p>Happy Birthday & Happy Anniversary, sayang! 🎂🎉💕</p>
+      <div class="closing-signature">— Kevin Syonin 🤍</div>
+    </div>
+
+    <button class="love-btn" id="loveBtn">I Love You 💕</button>
+  </section>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav" id="bottomNav">
+    <button class="nav-item active" data-target="sec-landing"><span class="nav-icon">🎉</span><span class="nav-label">Home</span></button>
+    <button class="nav-item" data-target="sec-letter"><span class="nav-icon">💌</span><span class="nav-label">Surat</span></button>
+    <button class="nav-item" data-target="sec-timeline"><span class="nav-icon">📖</span><span class="nav-label">Story</span></button>
+    <button class="nav-item" data-target="sec-gallery"><span class="nav-icon">📸</span><span class="nav-label">Foto</span></button>
+    <button class="nav-item" data-target="sec-video"><span class="nav-icon">🎬</span><span class="nav-label">Video</span></button>
+    <button class="nav-item" data-target="sec-quiz"><span class="nav-icon">🎮</span><span class="nav-label">Quiz</span></button>
+    <button class="nav-item" data-target="sec-scratch"><span class="nav-icon">🎫</span><span class="nav-label">Gosok</span></button>
+    <button class="nav-item" data-target="sec-cake"><span class="nav-icon">🎂</span><span class="nav-label">Cake</span></button>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
