@@ -1,0 +1,8 @@
+services:
+  web:
+    image: ghcr.io/huangmingzhi0206/angel_birthday_20th:v1.0.0
+    restart: unless-stopped
+    environment:
+      - SERVICE_FQDN_WEB_80
+    expose:
+      - "80"
